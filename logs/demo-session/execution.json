@@ -1,0 +1,133 @@
+{
+  "session_id": "demo-session",
+  "iteration": 0,
+  "critic_review": {
+    "overall_status": "PASS",
+    "hypothesis_reviews": [
+      {
+        "id": "H1",
+        "accepted": true
+      }
+    ],
+    "missing_evidence": [],
+    "contradictions": [],
+    "required_additional_analysis": [],
+    "confidence": 0.5
+  },
+  "errors": [],
+  "execution_trace": [
+    {
+      "agent_name": "DataProfiler",
+      "status": "complete",
+      "duration": 0.434,
+      "tools_used": [
+        "profile_dataset"
+      ],
+      "output_summary": "Dataset contains 10080 rows and 10 columns. Numerical features: sales, quantity, price, discount, marketing_spend, customer_count, profit. Categorical features: region, product. Datetime features: date, region, product, sales, quantity, price, discount, marketing_spend, customer_count, profit.",
+      "errors": [],
+      "iteration": 0,
+      "timestamp": "2026-10-08T17:10:00.495621+00:00"
+    },
+    {
+      "agent_name": "DataCleaning",
+      "status": "complete",
+      "duration": 0.835,
+      "tools_used": [
+        "clean_dataset"
+      ],
+      "output_summary": "Dataset contains 10080 rows and 10 columns. Numerical features: sales, quantity, price, discount, marketing_spend, customer_count, profit. Categorical features: region, product. Datetime features: date, region, product, sales, quantity, price, discount, marketing_spend, customer_count, profit.",
+      "errors": [],
+      "iteration": 0,
+      "timestamp": "2026-10-08T17:10:01.341738+00:00"
+    },
+    {
+      "agent_name": "AnalysisPlanner",
+      "status": "complete",
+      "duration": 0.0,
+      "tools_used": [],
+      "output_summary": "Selected and executed 0 validated analysis tool(s).",
+      "errors": [],
+      "iteration": 0,
+      "timestamp": "2026-10-08T17:10:01.430137+00:00"
+    },
+    {
+      "agent_name": "StatisticalAnalyst",
+      "status": "complete",
+      "duration": 0.453,
+      "tools_used": [
+        "calculate_correlations",
+        "group_analysis",
+        "time_trend_analysis"
+      ],
+      "output_summary": "Selected and executed 0 validated analysis tool(s).",
+      "errors": [],
+      "iteration": 0,
+      "timestamp": "2026-10-08T17:10:01.909169+00:00"
+    },
+    {
+      "agent_name": "VisualizationAgent",
+      "status": "complete",
+      "duration": 4.869,
+      "tools_used": [
+        "generate_time_series_plot",
+        "generate_bar_plot",
+        "generate_correlation_heatmap"
+      ],
+      "output_summary": "Selected and executed 0 validated analysis tool(s).",
+      "errors": [],
+      "iteration": 0,
+      "timestamp": "2026-10-08T17:10:06.804320+00:00"
+    },
+    {
+      "agent_name": "MLAnalyst",
+      "status": "complete",
+      "duration": 18.507,
+      "tools_used": [
+        "train_regression_model"
+      ],
+      "output_summary": "Selected and executed 0 validated analysis tool(s).",
+      "errors": [],
+      "iteration": 0,
+      "timestamp": "2026-10-08T17:10:25.336480+00:00"
+    },
+    {
+      "agent_name": "HypothesisGenerator",
+      "status": "complete",
+      "duration": 0.004,
+      "tools_used": [
+        "build_evidence_catalog",
+        "ollama_structured_hypotheses"
+      ],
+      "output_summary": "Selected and executed 0 validated analysis tool(s).",
+      "errors": [],
+      "iteration": 0,
+      "timestamp": "2026-10-08T17:10:25.392484+00:00"
+    },
+    {
+      "agent_name": "Critic",
+      "status": "complete",
+      "duration": 0.01,
+      "tools_used": [
+        "validate_hypothesis_citations",
+        "ollama_structured_critic_review"
+      ],
+      "output_summary": "Critic status: PASS.",
+      "errors": [],
+      "iteration": 0,
+      "timestamp": "2026-10-08T17:10:25.417663+00:00"
+    },
+    {
+      "agent_name": "ReportWriter",
+      "status": "complete",
+      "duration": 0.004,
+      "tools_used": [
+        "validate_report_citations",
+        "ollama_structured_report"
+      ],
+      "output_summary": "Critic status: PASS.",
+      "errors": [],
+      "iteration": 0,
+      "timestamp": "2026-10-08T17:10:25.477942+00:00"
+    }
+  ]
+}
